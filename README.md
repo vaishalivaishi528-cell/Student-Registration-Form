@@ -29,7 +29,9 @@ The main objective of this project is to create a simple registration system and
 
 
 How to View
-click this link to see the student registration form
+
+
+click this link to see the student registration form https://vaishalivaishi528-cell.github.io/Student-Registration-Form/
 
 Conclusion
 
