@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="card">
+    <h1>Registration Form</h1>
+    <p class="intro">All fields are required.</p>
+
+    <form id="registrationForm" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          autocomplete="name"
+          placeholder="Enter your name"
+          aria-describedby="nameError"
+          required
+        >
+        <p id="nameError" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          placeholder="you@example.com"
+          aria-describedby="emailError"
+          required
+        >
+        <p id="emailError" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="new-password"
+          minlength="6"
+          placeholder="Enter a password"
+          aria-describedby="passwordHint passwordError"
+          required
+        >
+        <p id="passwordHint" class="hint">
+          Use at least 6 characters.
+        </p>
+        <p id="passwordError" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="bio">Bio</label>
+        <textarea
+          id="bio"
+          name="bio"
+          maxlength="200"
+          placeholder="Tell us about yourself"
+          aria-describedby="bioCounter bioWarning bioError"
+          required
+        ></textarea>
+
+        <p id="bioCounter" class="counter">0 / 200 characters</p>
+        <p
+          id="bioWarning"
+          class="hint warning"
+          aria-live="polite"
+        ></p>
+        <p id="bioError" class="error" aria-live="polite"></p>
+      </div>
+
+      <button id="submitButton" type="submit" disabled>
+        Submit
+      </button>
+    </form>
+
+    <p id="successMessage" class="success" role="status" hidden></p>
+  </main>
+</body>
+</html>
